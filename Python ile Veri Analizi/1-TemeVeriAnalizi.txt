@@ -1,0 +1,23 @@
+
+Python, veri analizi için oldukça güçlü bir araçtır ve birçok kütüphane ve araç içerir. Temel veri analizi yapmak için genellikle pandas, NumPy, ve matplotlib gibi kütüphaneler kullanılır. Bu kütüphaneler, veri okuma, işleme, görselleştirme ve analiz için geniş bir işlevsellik sunar.
+
+Python Kütüphaneleri:
+
+Pandas: Veri analizi için en yaygın kullanılan kütüphanelerden biridir. Veriyi tablo formatında işlemek için kullanılır. Pandas, veri okuma, filtreleme, gruplama, birleştirme ve daha fazlasını yapmak için geniş bir işlevsellik sunar.
+
+NumPy: Sayısal hesaplamalar için temel bir kütüphanedir. Çok boyutlu diziler ve matrisler üzerinde hızlı işlemler yapmak için kullanılır. Pandas gibi veri analizi için temel bir yapı taşıdır.
+
+Matplotlib: Veriyi görselleştirmek için kullanılan bir çizim kütüphanesidir. Grafikler, histogramlar, çizgi grafikleri, dağılım grafikleri ve daha fazlasını oluşturmak için kullanılabilir.
+
+Seaborn: Matplotlib'in üst katmanında yer alan bir grafik kütüphanesidir. İstatistiksel veri görselleştirmesi için daha yüksek düzeyde bir arayüz sunar ve daha çekici ve bilgilendirici grafikler oluşturmak için kullanılır.
+
+Kütüphanelerin İmport Edilmesi 
+
+Kütüphanelerin import edilmesi, Python'da dışarıdan hazır işlevselliklerin kullanılabilmesini sağlar. import ifadesi, bir Python dosyasına veya bir betiğe başka bir Python dosyasındaki kodu eklemenizi sağlar. Bu, kullanmak istediğiniz kütüphanelerin adını belirterek yapılır.
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+Kütüphaneleri import etmek, Python programlama dilinde yazılım geliştirme sürecinin önemli bir parçasıdır ve çoğu zaman farklı projelerde tekrar tekrar kullanılan genel kod parçalarını içerir. Bu nedenle, bir projede kullanılacak kütüphaneleri başlangıçta import etmek, kodunuzu daha düzenli ve yönetilebilir hale getirir.

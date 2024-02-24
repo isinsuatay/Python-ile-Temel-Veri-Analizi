@@ -1,0 +1,42 @@
+Veri Keşfi ve Ön İşleme
+
+Veri keşfi, veri setini anlamak ve içeriğini incelemek için yapılan işlemleri içerirken, ön işleme ise verinin temizlenmesi, düzenlenmesi ve hazırlanması işlemlerini içerir. 
+
+Veri Keşfi:
+Özet İstatistiklerin İncelenmesi: Veri setinin temel istatistiklerine bakarak verinin dağılımı, merkezi eğilim ve yayılımını anlayabiliriz. Bu, describe() işlevi ile yapılabilir.
+
+Eksik Değerlerin İncelenmesi: Veri setindeki eksik değerleri bulmak ve bunların ne kadar olduğunu anlamak önemlidir. Eksik değerler, isnull() ve sum() işlevleriyle tespit edilebilir.
+
+Tekil Değerlerin ve Frekanslarının İncelenmesi: Kategorik değişkenlerdeki benzersiz değerleri ve her bir değerin frekansını incelemek, verinin içeriğini anlamamıza yardımcı olur. Bu, value_counts() işleviyle yapılabilir.
+
+import pandas as pd
+
+# Veriyi oku
+df = pd.read_csv('veri.csv')
+
+# Özet istatistikler
+print(df.describe())
+
+# Eksik değerlerin sayısı
+print(df.isnull().sum())
+
+# Tekil değerlerin ve frekanslarının incelenmesi
+print(df['kategorik_degisken'].value_counts())
+
+
+Veri Temizleme ve Düzenleme:
+Eksik Değerlerin İşlenmesi: Eksik değerler, uygun bir stratejiyle doldurulabilir veya eksik olan satırlar veya sütunlar çıkarılabilir. fillna() veya dropna() işlevleri kullanılabilir.
+
+Aykırı Değerlerin İncelenmesi ve İşlenmesi: Aykırı değerler, veri setinin analizini etkileyebilir. Bu nedenle, aykırı değerlerin tespit edilmesi ve işlenmesi önemlidir. Aykırı değerlerin tespiti için istatistiksel yöntemler veya görselleştirmeler kullanılabilir.
+
+Veri Türlerinin Dönüştürülmesi: Veri setindeki değişkenlerin doğru veri türlerine dönüştürülmesi önemlidir. Örneğin, tarih verileri datetime veri türüne dönüştürülebilir.
+
+# Eksik değerleri ortalama ile doldurma
+df['numeric_column'].fillna(df['numeric_column'].mean(), inplace=True)
+
+# Aykırı değerleri belirli bir aralıkta sınırlama
+df['numeric_column'] = np.where(df['numeric_column'] < lower_bound, lower_bound, df['numeric_column'])
+df['numeric_column'] = np.where(df['numeric_column'] > upper_bound, upper_bound, df['numeric_column'])
+
+# Tarih sütununu datetime veri türüne dönüştürme
+df['date_column'] = pd.to_datetime(df['date_column'])

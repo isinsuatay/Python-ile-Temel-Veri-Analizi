@@ -1,0 +1,12 @@
+
+Veri Analizi Adımları:
+
+Veri Toplama ve Okuma: İlk adım, veriyi toplamak ve uygun bir formatta okumaktır. Pandas kullanarak CSV, Excel, JSON, SQL vb. formatlardaki verileri okuyabilirsiniz.
+
+Veri Temizleme ve Düzenleme: Veriyi inceleyerek eksik veya hatalı değerleri tespit edin ve bunları düzeltin veya çıkarın. Gereksiz sütunları veya satırları kaldırarak veriyi temizleyin ve düzenleyin.
+
+Keşifsel Veri Analizi (EDA): Veriyi daha iyi anlamak için keşifsel veri analizi yapın. Özet istatistikler, grafikler ve görselleştirmeler kullanarak verinin dağılımını, ilişkilerini ve trendlerini inceleyin.
+
+İstatistiksel Analiz ve Modelleme: Veriyi istatistiksel analiz ve modelleme teknikleriyle daha derinlemesine inceleyin. Bu adım, regresyon analizi, sınıflandırma, kümeleme ve hipotez testleri gibi teknikleri içerebilir.
+
+Sonuçların Yorumlanması ve Raporlama: Elde edilen sonuçları yorumlayın ve bulgularınızı raporlayın. Analiz sonuçlarına dayanarak kararlar alın veya önerilerde bulunun.

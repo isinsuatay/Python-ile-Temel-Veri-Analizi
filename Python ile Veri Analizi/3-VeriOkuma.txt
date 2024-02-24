@@ -1,0 +1,56 @@
+
+İlk adım veriyi okumak ve içeriğini anlamak için veriyi yüklemektir. Genellikle CSV, Excel, JSON veya SQL veritabanlarından veri okuma işlemleri yapılır.
+
+import pandas as pd
+
+# CSV dosyasından veriyi oku
+df = pd.read_csv('veri.csv')
+
+# İlk 5 satırı göster
+print(df.head())
+
+Çeşitli veri formatlarından veri okumak için Pandas'ın sunduğu okuma işlevlerini ve bu işlevlere geçirilebilecek farklı parametreleri açıklayalım .
+
+CSV Dosyaları Okuma:
+
+CSV dosyalarından veri okumak için pd.read_csv() işlevi kullanılır. Bu işlevin bazı önemli parametreleri şunlardır:
+filepath_or_buffer: Okunacak CSV dosyasının dosya yolu veya URL'si.
+sep: Sütunları ayırmak için kullanılan ayraç.
+header: Başlık satırının hangi satırda olduğunu belirtir.
+usecols: Okunacak sütunların listesi.
+dtype: Sütunların veri tiplerini belirler.
+
+import pandas as pd
+
+# CSV dosyasından veriyi oku
+df = pd.read_csv('veri.csv', sep=';', header=0, usecols=['column1', 'column2'], dtype={'column1': int})
+
+
+Excel Dosyaları Okuma:
+
+Excel dosyalarından veri okumak için pd.read_excel() işlevi kullanılır. Bu işlevin bazı önemli parametreleri şunlardır:
+io: Okunacak Excel dosyasının dosya yolu veya URL'si.
+sheet_name: Okunacak çalışma sayfasının adı veya indeksi.
+header: Başlık satırının hangi satırda olduğunu belirtir.
+usecols: Okunacak sütunların listesi.
+dtype: Sütunların veri tiplerini belirler.
+
+import pandas as pd
+
+# Excel dosyasından veriyi oku
+df = pd.read_excel('veri.xlsx', sheet_name='Sheet1', header=0, usecols=['column1', 'column2'], dtype={'column1': int})
+
+SQL Veritabanlarından Sorgu Sonuçlarını Okuma:
+SQL veritabanlarından sorgu sonuçlarını okumak için pd.read_sql() işlevi kullanılır. Bu işlevin bazı önemli parametreleri şunlardır:
+sql: Çalıştırılacak SQL sorgusu.
+con: Veritabanı bağlantısı.
+params: SQL sorgusu için parametreler.
+
+import pandas as pd
+import sqlite3
+
+# SQLite veritabanı bağlantısını oluştur
+conn = sqlite3.connect('veritabani.db')
+
+# SQL sorgusu çalıştır ve sonucu DataFrame'e yükle
+df = pd.read_sql('SELECT * FROM table_name', conn)

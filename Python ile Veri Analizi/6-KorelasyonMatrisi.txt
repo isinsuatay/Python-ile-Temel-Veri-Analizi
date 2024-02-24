@@ -1,0 +1,27 @@
+Korelasyon matrisi, veri setindeki değişkenler arasındaki ilişkiyi görselleştirmek ve analiz etmek için kullanılan bir araçtır. Bu matris, her değişken çifti için Pearson korelasyon katsayısını içerir. Pearson korelasyon katsayısı, değişkenler arasındaki doğrusal ilişkinin gücünü ve yönünü ölçer. Değerler -1 ile 1 arasında olabilir:
+
+1'e yaklaşan bir korelasyon katsayısı, pozitif yönlü mükemmel bir doğrusal ilişkiyi temsil eder.
+
+-1'e yaklaşan bir korelasyon katsayısı, negatif yönlü mükemmel bir doğrusal ilişkiyi temsil eder.
+
+0'a yaklaşan bir korelasyon katsayısı, değişkenler arasında doğrusal bir ilişki olmadığını gösterir.
+
+Korelasyon matrisi, genellikle ısı haritası olarak görselleştirilir. Bu, her değişken çifti için korelasyon katsayısının renk tonu ile gösterildiği bir matristir. Koyu renkler yüksek korelasyonu, açık renkler düşük korelasyonu temsil eder.
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Veriyi oku
+df = pd.read_csv('veri.csv')
+
+# Korelasyon matrisini hesapla
+corr_matrix = df.corr()
+
+# Korelasyon matrisini görselleştir
+plt.figure(figsize=(10, 8))
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f", annot_kws={"size": 10})
+plt.title('Korelasyon Matrisi')
+plt.show()
+
+Bu kod, seaborn kütüphanesini kullanarak bir ısı haritası oluşturur. annot=True parametresi, korelasyon katsayılarının matris üzerine yazılmasını sağlar. cmap='coolwarm' parametresi, renk haritasını belirler. fmt=".2f" parametresi, katsayıların ondalık sayı formatını belirler.

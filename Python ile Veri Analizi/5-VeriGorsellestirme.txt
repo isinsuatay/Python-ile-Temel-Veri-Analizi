@@ -1,0 +1,71 @@
+Veri Görsellestirme
+
+Verinin dağılımını, ilişkilerini ve trendlerini görselleştirmek, veriyi daha iyi anlamak için önemlidir. matplotlib veya seaborn gibi kütüphaneler kullanarak grafikler oluşturulabilir.
+
+Histogram:
+Verinin dağılımını görselleştirmek için kullanılır. Örneğin, bir özellik veya değişkenin frekans dağılımını görmek için kullanılabilir.
+
+import matplotlib.pyplot as plt
+
+# Örnek veri
+data = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6]
+
+# Histogram çizimi
+plt.hist(data, bins=6, color='skyblue', edgecolor='black')
+plt.xlabel('Değerler')
+plt.ylabel('Frekans')
+plt.title('Histogram')
+plt.show()
+
+Bar Grafiği:
+Kategorik verilerin görselleştirilmesi için kullanılır. Her kategori için bir çubuk gösterilir.
+
+# Örnek veri
+categories = ['A', 'B', 'C', 'D']
+values = [10, 20, 15, 25]
+
+# Bar grafiği çizimi
+plt.bar(categories, values, color='lightgreen')
+plt.xlabel('Kategoriler')
+plt.ylabel('Değerler')
+plt.title('Bar Grafiği')
+plt.show()
+
+Pie Grafiği:
+Verinin oransal dağılımını göstermek için kullanılır. Her kategori için bir dilim çizilir.
+
+# Örnek veri
+sizes = [25, 30, 20, 25]
+labels = ['A', 'B', 'C', 'D']
+
+# Pie grafiği çizimi
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=['lightblue', 'lightgreen', 'lightcoral', 'lightskyblue'])
+plt.title('Pie Grafiği')
+plt.show()
+
+Scatter Plot (Nokta Grafiği):
+İki değişken arasındaki ilişkiyi görselleştirmek için kullanılır.
+
+# Örnek veri
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+# Nokta grafiği çizimi
+plt.scatter(x, y, color='orange')
+plt.xlabel('X Değerleri')
+plt.ylabel('Y Değerleri')
+plt.title('Nokta Grafiği')
+plt.show()
+
+Box Plot (Kutu Grafiği):
+Değişkenlerin dağılımını ve merkezi eğilimini görselleştirmek için kullanılır.
+
+# Örnek veri
+data = [10, 15, 20, 25, 30, 35, 40]
+
+# Kutu grafiği çizimi
+plt.boxplot(data)
+plt.ylabel('Değerler')
+plt.title('Kutu Grafiği')
+plt.show()
+
